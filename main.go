@@ -46,7 +46,7 @@ func main() {
 
 	go func() {
 		wg.Wait()
-		close(done)
+		close(done)  // only closed when all work is done
 	}()
 
 	counter := 0
