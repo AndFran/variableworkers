@@ -22,6 +22,7 @@ func worker(workChannel chan int, result chan int, wg *sync.WaitGroup) {
 }
 
 func producer(workChannel chan int) {
+	// can vary the amount of work
 	for i := 0; i < 400; i++ {
 		workChannel <- i
 	}
