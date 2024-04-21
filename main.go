@@ -52,7 +52,7 @@ func main() {
 
 	for {
 		select {
-		case i := <-resultChannel: // these race
+		case i := <-resultChannel:
 			counter++
 			fmt.Println(i)
 		case <-done:
